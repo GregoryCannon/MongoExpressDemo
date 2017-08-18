@@ -1,7 +1,7 @@
 # MongoExpressDemo
 
-A sample React/Express/Mongo app, that serves both client and the server routes.
-
+##### A sample React/Express/Mongo app, that serves both client and the server routes.
+Note - CSS loading is broken currently.
 
 Server endpoints:
 
