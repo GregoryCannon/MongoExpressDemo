@@ -6,10 +6,9 @@ class Homepage extends React.Component{
     return (
       <center>
         <div>
-          <h1>Welcome to the Poll Boilerplate</h1>
-          <form>
-            <Link to='/poll'>Poll Screen</Link>
-          </form>
+          <h1>Welcome to the Mongo-Express-React Demo</h1>
+          <h4>Checkout /api for some Mongo interaction, or chill here and admire the minimalist React components</h4>
+          <Link to='/poll'>Poll Screen</Link>
         </div>
       </center>
       );
