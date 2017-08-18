@@ -30,23 +30,7 @@ app.use(express.static(path.join(__dirname, '../client/assets')))
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "../client"))
 app.use('/api', apiRoutes);
-app.use('/', clientRoutes);
-app.use(function(req, res, next) {    // If it's not in the previous routes, throw a 404
-    var err = new Error('Page Not Found');
-    err.status = 404;
-    next(err);
-});
-
-// Error handler
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    console.log('err', err.message);
-    res.render('error', {
-        message: err.message,
-        status: err.status,
-        error: (app.get('env') === 'development') ? err : {}
-    });
-});
+app.use('*', clientRoutes);
 
 // Run on port 3000
 const port = process.env.PORT || 3000;
