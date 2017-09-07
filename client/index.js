@@ -9,18 +9,14 @@ import App from './components/app';
 
 // This file is the client entry point, specified in webpack.config
 
-const AppClient = (props) => {
-  console.log(Poll);
-  console.log(App);
-  return (
+const AppClient = (props) => (
     <Router history={createHistory()}>
       <App>
         <Route exact path="/" component={Homepage}/>
         <Route path="/poll" component={Poll}/>
       </App>
     </Router>
-  );
-}
+);
 
 ReactDOM.render(
   <AppClient />,
